@@ -17,7 +17,7 @@ our @EXPORT_OK = qw(
 	ellipsis
 );
 
-sub vlength ($) {
+sub vlength ($) { ## no critic
 	my ($string) = @_;
 	my $ret = 0;
 	local $_ = $string;

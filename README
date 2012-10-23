@@ -1,27 +1,29 @@
-This is Perl module Text::Xatena.
+NAME
+    Text::Overflow -
 
-INSTALLATION
+SYNOPSIS
+      use Text::Overflow qw(ellipsis clip);
 
-Text::Overflow installation is straightforward. If your CPAN shell is set up,
-you should just be able to do
+      clip('1234567890', 6);
+      #=> '123456';
 
-    % cpan Text::Overflow
+      clip('１２３４５６７８９０', 6);
+      #=> '１２３';
 
-Download it, unpack it, then build it as per the usual:
+      ellipsis('1234567890', 6);
+      #=> '12345…';
 
-    % perl Makefile.PL
-    % make && make test
+      ellipsis('１２３４５６７８９０', 6);
+      #=> '１２…';
 
-Then install it:
+DESCRIPTION
+    Text::Overflow is for clipping text for a width
 
-    % make install
+AUTHOR
+    cho45 <cho45@lowreal.net>
 
-DOCUMENTATION
+SEE ALSO
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-Text::Overflow documentation is available as in POD. So you can do:
-
-    % perldoc Text::Overflow
-
-to read the documentation online with your favorite pager.
-
-cho45
