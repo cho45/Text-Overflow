@@ -63,7 +63,7 @@ sub ellipsis {
 1;
 __END__
 
-=encoding utf8
+=encoding utf-8
 
 =head1 NAME
 
@@ -89,6 +89,26 @@ Text::Overflow -
 =head1 DESCRIPTION
 
 Text::Overflow is for clipping text for a width
+
+=over
+
+=item Text::Overflow::vlength($string)
+
+Return visual width of C<$string>.
+
+=item Text::Overflow::vtrim($string, $length, $delim)
+
+Trim C<$string> to visual width specified C<$length> including C<$delim>
+
+=item Text::Overflow::clip($string, $length)
+
+Clip C<$string>. This is same as vtrim($string, $length, "")
+
+=item Text::Overflow::ellipsis($string, $length);
+
+Clip and append ellipsis character. This is same as vtrim($string, $length, "…")   
+
+=back
 
 =head1 AUTHOR
 
