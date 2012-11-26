@@ -22,6 +22,7 @@ name 'Text-Overflow';
 all_from 'lib/Text/Overflow.pm';
 
 requires 'Exporter::Lite';
+requires 'Unicode::EastAsianWidth';
 
 build_requires 'Test::More';
 
